@@ -1,0 +1,102 @@
+INFO:root:[Попытка 1/5] Пробуем отпечаток: chrome120
+INFO:root:Успешно распарсили: Процессор Core i3 Alder Lake 12100F сокет LGA 1700 OEM -> 906000 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: safari17
+WARNING:root:Ошибка при парсинге JSON: Impersonating safari17 is not supported
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: firefox
+INFO:root:Успешно распарсили: Процессор Core i3-12100F, OEM -> 962200 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: chrome_android
+INFO:root:Успешно распарсили: Процессор Core i3-12100F LGA1700 OEM -> 910000 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: firefox
+INFO:root:Успешно распарсили: Процессор Core i3 12100F Soc-1700 -> 988600 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: chrome_android
+INFO:root:Сервер вернул статус 403
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: chrome120
+INFO:root:Сервер вернул статус 403
+INFO:root:Ожидание 4 сек перед следующим ретраем...
+
+INFO:root:[Попытка 3/5] Пробуем отпечаток: chrome116
+INFO:root:Успешно распарсили: Процессор Core i3 12100F Soc-1700 -> 988600 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: edge118
+WARNING:root:Ошибка при парсинге JSON: Impersonating edge118 is not supported
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: safari_ios
+INFO:root:Успешно распарсили: Процессор Core i3 12100F Soc-1700 -> 988600 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: edge118
+WARNING:root:Ошибка при парсинге JSON: Impersonating edge118 is not supported
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: chrome120
+INFO:root:Сервер вернул статус 403
+INFO:root:Ожидание 4 сек перед следующим ретраем...
+
+INFO:root:[Попытка 3/5] Пробуем отпечаток: firefox
+INFO:root:Успешно распарсили: Процессор Core i3 12100F OEM LGA 1700 -> 808400 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: edge118
+WARNING:root:Ошибка при парсинге JSON: Impersonating edge118 is not supported
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: chrome116
+INFO:root:Успешно распарсили: Процессор Core i3 12100F OEM LGA 1700 -> 808400 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: chrome_android
+INFO:root:Сервер вернул статус 403
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: firefox
+INFO:root:Успешно распарсили: Процессор Core i3 12100F для ПК -> 859900 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: firefox117
+WARNING:root:Ошибка при парсинге JSON: Impersonating firefox117 is not supported
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: chrome120
+INFO:root:Сервер вернул статус 403
+INFO:root:Ожидание 4 сек перед следующим ретраем...
+
+INFO:root:[Попытка 3/5] Пробуем отпечаток: chrome
+INFO:root:Сервер вернул статус 403
+INFO:root:Ожидание 6 сек перед следующим ретраем...
+
+INFO:root:[Попытка 4/5] Пробуем отпечаток: safari17
+WARNING:root:Ошибка при парсинге JSON: Impersonating safari17 is not supported
+INFO:root:Ожидание 8 сек перед следующим ретраем...
+
+INFO:root:[Попытка 5/5] Пробуем отпечаток: safari
+INFO:root:Успешно распарсили: Процессор Core i3-12100F, OEM -> 962200 коп.
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @wb_p4rs3r_bot id=8841770779 - 'wb_parser'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @wb_p4rs3r_bot id=8841770779 - 'wb_parser'
+INFO:root:[Попытка 1/5] Пробуем отпечаток: safari
+INFO:root:Успешно распарсили: Процессор Core i3-12100F OEM, 4 ядра 3300 МГц, LGA 1700 -> 1057000 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: opera100
+WARNING:root:Ошибка при парсинге JSON: Impersonating opera100 is not supported
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: edge118
+WARNING:root:Ошибка при парсинге JSON: Impersonating edge118 is not supported
+INFO:root:Ожидание 4 сек перед следующим ретраем...
+
+INFO:root:[Попытка 3/5] Пробуем отпечаток: firefox117
+WARNING:root:Ошибка при парсинге JSON: Impersonating firefox117 is not supported
+INFO:root:Ожидание 6 сек перед следующим ретраем...
+
+INFO:root:[Попытка 4/5] Пробуем отпечаток: safari17
+WARNING:root:Ошибка при парсинге JSON: Impersonating safari17 is not supported
+INFO:root:Ожидание 8 сек перед следующим ретраем...
+
+INFO:root:[Попытка 5/5] Пробуем отпечаток: firefox
+INFO:root:Успешно распарсили: Процессор Core i3-12100F LGA 1700 OEM -> 3652500 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: safari
+INFO:root:Успешно распарсили: Процессор Core i3-12100F LGA 1700 OEM -> 3652500 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: safari_ios
+INFO:root:Успешно распарсили: core i3 12100F процессор -> 1858900 коп.
+INFO:root:[Попытка 1/5] Пробуем отпечаток: safari17
+WARNING:root:Ошибка при парсинге JSON: Impersonating safari17 is not supported
+INFO:root:Ожидание 2 сек перед следующим ретраем...
+
+INFO:root:[Попытка 2/5] Пробуем отпечаток: firefox
+INFO:root:Успешно распарсили: процессор core i3 12100F -> 1858900 коп.

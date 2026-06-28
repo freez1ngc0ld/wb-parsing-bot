@@ -1,0 +1,103 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: wb_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - wb_network
+
+  redis:
+    image: redis:7.2-alpine
+    container_name: wb_redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT}:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - wb_network
+
+  web_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wb_api
+    restart: unless-stopped
+    command: python main.py  
+    ports:
+      - "${API_PORT}:8000"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - wb_network
+
+  taskiq_worker:
+    build:
+      context: .
+      dockerfile: Dockerfile 
+    container_name: wb_taskiq_worker
+    restart: unless-stopped
+    command: taskiq worker --workers 1 parser.broker:broker parser.tasks
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
+      - REDIS_URL=redis://${REDIS_HOST}:${REDIS_PORT}/0
+      - API_URL=http://web_api:${API_PORT}/api
+      - PYTHONPATH=/app
+    depends_on:
+      - redis
+      - web_api
+    networks:
+      - wb_network
+
+  taskiq_scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wb_taskiq_scheduler
+    restart: unless-stopped
+    command: taskiq scheduler parser.broker:scheduler --fs-discover --log-level DEBUG
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
+      - REDIS_URL=redis://${REDIS_HOST}:${REDIS_PORT}/0
+      - API_URL=http://web_api:${API_PORT}/api
+      - PYTHONPATH=/app
+    depends_on:
+      - redis
+      - web_api
+    networks:
+      - wb_network
+
+  tg_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wb_bot
+    restart: unless-stopped
+    command: python bot.py 
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
+      - REDIS_URL=redis://${REDIS_HOST}:${REDIS_PORT}/0
+      - API_URL=http://web_api:${API_PORT}/api
+    depends_on:
+      - web_api
+    networks:
+      - wb_network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  wb_network:
+    driver: bridge
